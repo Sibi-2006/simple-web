@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>StonePaperScissor</title>
+    <link rel="stylesheet" href="../CSS/game1.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Stone🪨 Paper📃 Scissors✂️ </h1>
+        <div class="but">
+            <button onclick="human('stone')">Stone🪨</button>
+            <button onclick="human('paper')">Paper📃</button>
+            <button onclick="human('scissor')">Scissors✂️</button>
+            <button onclick="Reset()">Reset 🔄</button>
+        </div>
+        <div id="res"> </div>
+        <div id="score" style="height: 20px;"></div>
+    </div>
+    <script>
+        let result=document.getElementById("res");
+        let sco=document.getElementById("score");
+        let score= JSON.parse(localStorage.getItem("score"))||{
+            win:0,
+            loss:0,
+            tie:0
+        }
+        sco.innerHTML=`Win 😁 : ${score.win} | Loss 😱 : ${score.loss} | Tie 😬 : ${score.tie}`
+        
+        let r = Math.floor(Math.random()*9)+1;
+        
+        let hm="";
+        let res="";
+         function getComputerMove() {
+            let r = Math.floor(Math.random() * 3);
+            if (r === 0) return "stone";
+            if (r === 1) return "paper";
+            return "scissor";
+        }
+
+        function human(str){
+            let cm =getComputerMove();
+            hm=str;
+            if(hm===cm){
+                res="tie";
+                score.tie++;
+            }
+            else if((hm==="paper" && cm==="stone") || (hm==="stone" && cm==="scissor") || (hm==="scissor" && cm==="paper")){
+                res="win";
+                score.win++;
+            }else{
+                res="loss";
+                score.loss++;
+            }
+            localStorage.setItem("score",JSON.stringify(score));
+            result.innerHTML =`Human move 👨🏼 : ${hm} <br>Computer move 🤖 : ${cm}<br>The resule 🏆 : ${res}`
+            sco.innerHTML=`Win 😁 : ${score.win} | Loss 😱 : ${score.loss} | Tie 😬 : ${score.tie}`
+        }
+        function Reset(){
+            score={ win:0,loss:0,tie:0};
+            localStorage.setItem("score",JSON.stringify(score));
+            sco.innerHTML=`Your score was reset 🔄`;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/colour.css">
+</head>
+<body>
+        <div id="but">
+            <div id="res"></div>
+            <button>Change B-G colour</button>
+            
+        </div>
+        
+    <script>
+        const but=document.querySelector("button");
+       let res=document.getElementById("res");
+        let hex =[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        let color='#';
+        function RendomHex(){
+            let index=Math.floor(Math.random()*16);
+            return hex[index];
+        }
+        function BGcolour(){
+            color='#';
+            for(let i=0;i<6;i++){
+                color+=RendomHex();
+            }
+            document.body.style.backgroundColor=color;
+            res.innerHTML=color;
+        }
+        but.addEventListener("click",BGcolour);
+        document.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        BGcolour();
+    }
+});
+
+    </script>
+</body>
+</html>

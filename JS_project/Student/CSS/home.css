@@ -1,0 +1,27 @@
+
+label{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding: 20px;
+    text-shadow: 2px 3px 5px white;
+}
+button{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    color: #000;
+    
+    border-radius: 10%;
+    font-size: 25px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 150px;
+    
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10%;
+    cursor: pointer;
+}

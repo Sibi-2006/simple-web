@@ -1,0 +1,80 @@
+body{
+    background-color: #fbc8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 50px;
+    padding: 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10%;
+    background-color: #00000062;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+    width: 100%;
+    max-width: 400px;
+}
+
+#res,#res_Armstong,#prime_res,#fact_res{
+    font-size: 25px;
+    background-color: #fff0f0;
+    text-align: center;
+    border-radius: 10%;
+    margin: 20px;
+    height: 50px;
+    width: 300px;
+    border: 2px solid black;
+    padding: 10px;
+}
+button{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    background-color: rgb(255, 252, 87);
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10%;
+    font-weight: 600;
+    transition: .3s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px 10px white;
+    border: white 2px solid;
+}
+#input, #Armstong, #prime, #fact {
+    width: 300px;
+    height: 30px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.con{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+@media(max-width:1200px){
+    .con{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    } 
+}
+@media(max-width:800px){
+    .con{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    } 
+}
