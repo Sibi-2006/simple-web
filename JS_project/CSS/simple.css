@@ -3,7 +3,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    flex-direction: column;
     margin-top: 50px;
     padding: 0;
 }
@@ -21,23 +21,29 @@ body{
     width: 100%;
     max-width: 400px;
 }
-
+h1{
+    color: #2e0032;
+    text-shadow: 3px 3px 10px #790582;
+    font-size: 50px;
+    margin: 20px;
+}
 #res,#res_Armstong,#prime_res,#fact_res{
     font-size: 25px;
-    background-color: #fff0f0;
+    background-color: #fff0f093;
     text-align: center;
     border-radius: 10%;
     margin: 20px;
     height: 50px;
     width: 300px;
-    border: 2px solid black;
+    text-shadow: 3px 3px 10px black;
+    border: 2px dotted black;
     padding: 10px;
 }
 button{
     height: 50px;
     width: 150px;
     font-size: 20px;
-    background-color: rgb(255, 252, 87);
+    background-color: #e743f38a;
     margin: 20px;
     border: 2px solid black;
     border-radius: 10%;
@@ -70,11 +76,30 @@ button:hover{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
-    } 
+    } .main{
+        max-width: 300px;
+    }#input, #Armstong, #prime, #fact {
+        width: 250px;
+        height: 30px;
+        font-size: 15px;
+        font-weight: 600;
+    }h2{
+        font-size: 24px;
+    }
+    #res,#res_Armstong,#prime_res,#fact_res{
+        height: 30px;
+        width: 200px;
+        font-size: 15px;
+    }
 }
 @media(max-width:800px){
     .con{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+        margin: 20px;
+        font-weight: 600;
     } 
+    h1{
+        font-size: 20px;
+    }
 }
