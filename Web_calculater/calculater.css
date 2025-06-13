@@ -16,21 +16,27 @@ body{
     box-shadow: 3px 3px 10px black;
 }
 .buttons{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 5px;
     gap: 10px;
 }
 .equal {
     
-    grid-column: span 4;
+    width: 240px;
     background-color: rgb(247, 104, 15);
     color: white;
     height: 50px;
     font-size: 20px;
     font-weight: 700;
     border: 2px solid black;
-    border-radius: 10%;
+    border-radius: 7%;
+    margin: 15px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    
 }
 
 
