@@ -1,6 +1,6 @@
 body{
     background-color: #f9e5cc;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,6 +21,19 @@ body{
     margin: 5px;
     gap: 10px;
 }
+.equal {
+    
+    grid-column: span 4;
+    background-color: rgb(247, 104, 15);
+    color: white;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 10%;
+}
+
+
 button{
     height: 50px;
     width: 50px;
