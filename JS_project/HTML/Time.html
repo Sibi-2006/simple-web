@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+    <link rel="stylesheet" href="../CSS/Time.css">
+</head>
+<body>
+    <h1>TIME ⏰</h1>
+    <div class="main">
+        <div class="con">
+            <samp id="hours">00</samp>
+            <samp>:</samp>
+            <samp id="min">00</samp>
+            <samp>:</samp>
+            <samp id="sec">00</samp>
+            <samp>:</samp>
+            <samp id="ampm">AM</samp>
+        </div>
+    </div>
+    <script>
+        let AMPM = document.getElementById("ampm");
+
+function DisplayTime() {
+    let date = new Date();
+    let Hr = date.getHours();
+    let Min = date.getMinutes();
+    let Sec = date.getSeconds();
+
+    if (Hr >= 12) {
+        AMPM.innerHTML = 'PM';
+        if (Hr > 12) Hr -= 12;
+    } else {
+        AMPM.innerHTML = 'AM';
+        if (Hr === 0) Hr = 12;
+    }
+
+    Hr = Hr < 10 ? "0" + Hr : Hr;
+    Min = Min < 10 ? "0" + Min : Min;
+    Sec = Sec < 10 ? "0" + Sec : Sec;
+
+    document.getElementById("hours").innerHTML = Hr;
+    document.getElementById("min").innerHTML = Min;
+    document.getElementById("sec").innerHTML = Sec;
+}
+
+setInterval(DisplayTime, 500);
+
+    </script>
+</body>
+</html>

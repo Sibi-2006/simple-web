@@ -1,0 +1,22 @@
+body{
+    background-color: #8efafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.main{
+    border:  5px solid #000000;
+    padding: 20px;
+    box-shadow: 3px 3px 10px #000000;
+    border-radius: 5%;
+    background-color:#07414187 ;
+}
+.con{
+    color: #ffffff;
+    font-size: 40px;
+}
+h1{
+    text-shadow: 3px 3px 5px black;
+}
