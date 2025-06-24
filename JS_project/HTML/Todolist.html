@@ -17,53 +17,73 @@
         <button id="clearall">Clear all</button>
     </div>
     <script >
-        let input = document.getElementById("input");
+        
+let input = document.getElementById("input");
 let add = document.getElementById("add");
 let todolist = document.getElementById("todolist");
-let todos =[];
-let clearall=document.getElementById("clearall")
-window.onload=()=>{
-    todos=JSON.parse(localStorage.getItem('todo'))||[];
-    todos.forEach(todo => {
-       ToDoList(todo) 
-    });
-}
-add.addEventListener("click" , ()=>{
-    todos.push(input.value);
-    localStorage.setItem('todo',JSON.stringify(todos))
-    ToDoList(input.value);
-    input.value='';
+let todos = [];
+let clearall = document.getElementById("clearall");
+
+window.onload = () => {
+    todos = JSON.parse(localStorage.getItem("todo")) || [];
+    todos.forEach(todo => ToDoList(todo));
+};
+
+add.addEventListener("click", () => {
+    let value = input.value.trim();
+    if (value === "") return;
+    todos.push(value);
+    localStorage.setItem("todo", JSON.stringify(todos));
+    ToDoList(value);
+    input.value = '';
 });
-function ToDoList(todo){
-    let para = document.createElement('p');
-    para.innerText=todo;
-    todolist.appendChild(para)
+
+function ToDoList(todo) {
+    let para = document.createElement("p");
+    para.innerText = todo;
+    todolist.appendChild(para);
+
+   
+    para.addEventListener("click", () => {
+        para.style.textDecoration = "line-through";
+        remove(todo);
+    });
+
+   
+    para.addEventListener("dblclick", () => {
+        todolist.removeChild(para);
+        remove(todo);
+    });
+
     
-    para.addEventListener("click",()=>{
-        para.style.textDecoration="line-through";
-        remove(todo);
+    let tapped = false;
+    para.addEventListener("touchend", () => {
+        if (!tapped) {
+            tapped = true;
+            setTimeout(() => tapped = false, 300);
+        } else {
+            todolist.removeChild(para);
+            remove(todo);
+        }
     });
-    para.addEventListener("dblclick",()=>{
-        todolist.removeChild(para)
-        remove(todo);
-    });
-}
-function remove(todo){
-    let index=todos.indexOf(todo);
-    if (index > -1) {
-        todos.splice(index, 1);
-        
-    }
-    localStorage.setItem('todo', JSON.stringify(todos));
-}
-clearall.addEventListener("click",()=>{
-    if (confirm("Are you sure you want to clear all tasks?")) {
-    localStorage.removeItem("todo");
-    todolist.innerHTML = "";
-    todos = [];
 }
 
-})
+function remove(todo) {
+    let index = todos.indexOf(todo);
+    if (index > -1) {
+        todos.splice(index, 1);
+        localStorage.setItem("todo", JSON.stringify(todos));
+    }
+}
+
+clearall.addEventListener("click", () => {
+    if (confirm("Are you sure you want to clear all tasks?")) {
+        localStorage.removeItem("todo");
+        todolist.innerHTML = "";
+        todos = [];
+    }
+});
+
     </script>
 </body>
 </html>
