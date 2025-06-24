@@ -32,7 +32,7 @@ add.addEventListener("click" , ()=>{
     todos.push(input.value);
     localStorage.setItem('todo',JSON.stringify(todos))
     ToDoList(input.value);
-    input.value=' ';
+    input.value='';
 });
 function ToDoList(todo){
     let para = document.createElement('p');
