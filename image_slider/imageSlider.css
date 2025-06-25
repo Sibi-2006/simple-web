@@ -44,7 +44,7 @@ body{
 }
 @media (max-width:600px) {
     .main{
-        min-height: 95vh;
+        min-height: 85vh;
         width: 90%;
     }
       
