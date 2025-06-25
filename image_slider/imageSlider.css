@@ -1,0 +1,51 @@
+body{
+    background-color: #76ffaa9b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+    width: 48%;
+    border: 2px solid black;
+    border-radius: 7%;
+    box-shadow: 3px 3px 10px black;
+    position: relative;
+    background: url("img/img1.jpg") center/cover fixed no-repeat;
+    
+   
+}
+
+.right{
+    background-color: white;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 25%;
+    position: absolute;
+    top: 50%;
+    left: -2%;
+    cursor: pointer;
+}
+.left{
+    background-color: white;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 25%;
+    position: absolute;
+    top: 50%;
+    right: -2%;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .main{
+        min-height: 95vh;
+        width: 90%;
+    }
+      
+}
