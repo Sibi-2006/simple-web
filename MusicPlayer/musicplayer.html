@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="musicplayer.css">
+</head>
+<body>
+    <div class="con">
+            <h1>Music Player.</h1>
+  <div class="main">
+    <img src="img/eminem.jpg" alt="" id="img">
+    <p id="songName">Song: Eminem - Without Me</p>
+    <audio src="songs/Eminem - Without Me.mp3" controls id="audio"></audio>
+    
+    <div class="btn">
+      <button onclick="prevSong()">⏮️</button>
+      <button onclick="togglePlay()" id="PuseOrPlay">▶️</button>
+      <button onclick="nextSong()">⏭️</button>
+    </div>
+  </div>
+    </div>
+    
+  <script src="musicplayer.js"></script>
+</body>
+</html>
