@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="textToSpeech.css">
+</head>
+<body>
+    <div class="con">
+        <h1>Text💬 to Speech🗣️</h1>
+        <div id="main">
+            <input type="text" placeholder="Text to Speech!" id="input">
+            <button onclick="speech()">Speech</button>
+        </div>
+    </div>
+    
+
+    <script>
+        function speech(){
+            const input = document.getElementById('input').value;
+            const textToSpeech = new SpeechSynthesisUtterance(input);
+            window.speechSynthesis.speak(textToSpeech);
+        }
+        setInterval(BGcolour,1000)
+        let hex =[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        let color='#';
+        let main = document.getElementById('main');
+        function RendomHex(){
+            let index=Math.floor(Math.random()*16);
+            return hex[index];
+        }
+        function BGcolour(){
+            color='#';
+            for(let i=0;i<6;i++){
+                color+=RendomHex();
+            }
+            main.style.backgroundColor=color;
+        }
+        BGcolour()
+    </script>
+</body>
+</html>
