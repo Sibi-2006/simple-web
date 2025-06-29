@@ -5,7 +5,10 @@ const img = document.getElementById('img');
 
 const songs = [
   { name: "Eminem - Without Me", file: "Eminem - Without Me.mp3", img: "eminem.jpg" },
-  { name: "Yung Kai - Blue", file: "yung kai - blue.mp3", img: "blue.jpg" }
+  { name: "Yung Kai - Blue", file: "yung kai - blue.mp3", img: "blue.jpg" },
+  { name: "MY TYPE", file: "MY TYPE.mp3", img: "mytype.jpg" },
+  { name: "Sonne", file: "Sonne.mp3", img: "sonne.jpg" },
+  { name: "Mary On A Cross", file: "Ghost - Mary On A Cross.mp3", img: "mary.jpg" }
 ];
 
 let songindex = 0;
