@@ -1,0 +1,81 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e8ff758a;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 10px white,3px 3px 10px #70c3c9,3px 3px 30px #ffffffd5,3px 3px 40px rgb(255, 240, 252);
+    gap: 0;
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.gameboard{
+    background-color: #00000076;
+    border: 2px solid #ffffff;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    cursor: pointer;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.ch{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.score{
+    padding: 15px;
+    margin: 20px;
+    background-color: #00000076;
+    color: #ffffff;
+    font-size: 20px;
+    border: 2px black dotted;
+    border-radius: 7%;
+}
+
+#resbtn{
+    display: none;
+    height: 50px;
+    width: 150px;
+    background-color: #e92121eb;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 10%;
+    transition: .5s;
+}#resbtn:hover{
+    background-color: #000000;
+}
+.gamech{
+    border: black 2px solid;
+    padding: 10px;
+}
+#chO{
+    background-color: #ffffff67;
+   
+}
+#chX{
+    background-color: lightblue;
+}
+#winnerText {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    padding: 10px;
+}

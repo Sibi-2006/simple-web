@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+    
+    <h1>Tic Tac Toe</h1>
+    <div class="ch">
+        <h1 id="chX" class="gamech">X</h1>
+        <h1 id="chO" class="gamech">O</h1>
+    </div>
+    <div class="main">
+        <div class="row">
+            <div class="gameboard box">0</div>
+            <div class="gameboard box" >1</div>
+            <div class="gameboard box" >2</div>
+        </div>
+        <div class="row">
+            <div class="gameboard box" >3</div>
+            <div class="gameboard box" >4</div>
+            <div class="gameboard box" >5</div>
+        </div>
+        <div class="row">
+            <div class="gameboard box" >6</div>
+            <div class="gameboard box" >7</div>
+            <div class="gameboard box" >8</div>
+        </div>
+    </div>
+    <div id="winnerText"></div>
+
+    <div class="score" id="scoreBD">X-win : 0 || Y-win : 0 || Tie : 0</div>
+    <button id="resbtn">Play Again</button>
+    <script src="tictactoe.js"></script>
+    
+</body>
+</html>
