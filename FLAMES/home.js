@@ -53,7 +53,7 @@ tsParticles.load("tsparticles", {
     fullScreen: { enable: false },
     particles: {
         number: {
-            value: 50
+            value: 25
         },
         shape: {
             type: "image",
