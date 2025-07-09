@@ -49,6 +49,39 @@ btn.addEventListener('click',()=>{
     "E": "Enemies 😡",
     "S": "Siblings 🧑‍🤝‍🧑"
 };
+tsParticles.load("tsparticles", {
+    fullScreen: { enable: false },
+    particles: {
+        number: {
+            value: 50
+        },
+        shape: {
+            type: "image",
+            image: {
+                src: "https://cdn-icons-png.flaticon.com/512/833/833472.png",
+                width: 32,
+                height: 32
+            }
+        },
+        size: {
+            value: { min: 10, max: 20 }
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "bottom",
+            outModes: {
+                default: "out"
+            }
+        },
+        opacity: {
+            value: 0.8
+        }
+    },
+    background: {
+        color: "transparent"
+    }
+});
 
     res.innerHTML = `Your relationship is: <b>${meaning[mess]}</b>`;
 
