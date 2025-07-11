@@ -1,18 +1,17 @@
 body{
     background-color: #5fffd485;
-    
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
 }
-
-
-
-    .marquee-box {
+.marquee-box {
   overflow: hidden;
   width: 100%;
   white-space: nowrap;
@@ -54,12 +53,13 @@ button{
     padding: 15px;
     font-size: 20px;
     border: 2px solid #31fa99;
-    border-radius: 5%;
+    border-radius: 50px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
     background-color: #003e2d;
     color: #ffffff;
     transition: .3s;
+    font-family: "Ubuntu Mono", monospace;
 }
 button:hover{
     background-color: white;
