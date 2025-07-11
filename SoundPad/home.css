@@ -1,0 +1,47 @@
+body{
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.first,.end{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+}
+button{
+    height: 200px;
+    width: 200px;
+    border: 2px black solid;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: transform 0.5s;
+    box-shadow: 3px 3px 10px rgb(115, 115, 220);
+}
+button:active{
+    background-color: yellow;
+     transform: scale(1.1);
+}
+@media(max-width:700px){
+    .first,.end{
+        display: flex;
+        flex-direction: column;
+    }.main{
+        display: flex;
+        flex-direction: row;
+    }
+    button{
+        height: 125px;
+        width: 125px;
+    }
+}
