@@ -52,9 +52,10 @@ simple-web/
 
 ## 🙋‍♂️ Author
 
-**Sibiraj R (Sibi Bro 💪)**  
-Desi dev, fitness beast, and frontend learner.  
-Building one project at a time with 💻 + 🥚 + peanut butter 😎
+**Sibiraj R**  
+A focused learner blending design, function, and fitness into every project.  
+Loves coding, calisthenics, and clean UI.
+
 
 ---
 
