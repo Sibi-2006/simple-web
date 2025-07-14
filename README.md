@@ -28,14 +28,7 @@ Perfect as a beginner-friendly project or personal starter template!
 
 ---
 
-## 📸 Screenshots
 
-### 🖼️ Homepage View  
-![Homepage Screenshot]()
-
-> *(Make sure you add your screenshot inside an `images/` folder)*
-
----
 
 ## 📁 Project Structure
 
